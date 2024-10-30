@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  background: #E5EEFF;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  color: #2C2C2C;
+}
+
+.react-calendar {
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  color: #2C2C2C;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+
+.react-calendar--doubleView {
+  width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  color: #FF7BAC;
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #8BACED;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #FF7BAC;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #2C2C2C;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #f8f8fa;
+  color: #FF7BAC;
+  border-radius: 6px;
+}
+
+.react-calendar__tile--now {
+  background: #2C2C2C;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #FF7BAC33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #FF7BAC;
+}
+
+.react-calendar__tile--hasActive {
+  background: #FF7BAC;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #f8f8fa;
+}
+
+.react-calendar__tile--active {
+  background: #FF7BAC;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #FF7BAC;
+  color: #FFFFFF;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #f8f8fa;
+}
+
+.react-calendar__tile--range {
+  background: #8BACED;
+  color: #FF7BAC;
+  border-radius: 0;
+}
+
+.react-calendar__tile--rangeStart {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background: #FF7BAC;
+  color: #FFFFFF;
+}
+
+.react-calendar__tile--rangeEnd {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #FF7BAC;
+  color: #FFFFFF;
+}
+
+.react-calendar__month-view__days__day--weekend div{
+  display: none;
+}
+
+.video-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-popup {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #000;
+}
+
+
+.rbc-month-view .rbc-month-row div,
+.rbc-time-view .rbc-time-header-content,
+.rbc-agenda-view table .rbc-agenda-time-cell,
+.rbc-agenda-view table .rbc-agenda-date-cell {
+  color: black !important;
+}
+
+.rbc-toolbar button{
+  color: #FF7BAC !important;
+  background: #FFF2F7 !important;
+  border: none !important;
+}
+
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active, .rbc-toolbar button:hover {
+  color: #FFFFFF !important;
+  background: #FF7BAC !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.rbc-toolbar{
+  margin-bottom: unset !important;
+  background: transparent !important;
+  padding-bottom: 20px !important;
+}
+
+.rbc-calendar{
+  border-radius: 0.5rem !important;
+  border: none !important;
+  padding: 20px !important;
+}
+
+.header-links:hover span{
+  color: #1A65F5 !important;
+}
+
+.rbc-agenda-view table.rbc-agenda-table tbody > tr > td{
+  color: white !important;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.rbc-row-segment .rbc-event .rbc-event-content{
+  color: white !important;
+}
+
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus{
+  background: #f8f8fa !important;
+  color: #FF7BAC !important;
+  border-radius: 0.5rem !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.MuiBox-root{
+  z-index: 2!important;
+}
+.MuiBox-root *{
+  z-index: 2!important;
+}
+
+
+

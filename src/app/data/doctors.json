@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Dr. John Smith",
+    "specialty": "Cardiologist",
+    "experience": 15,
+    "city": "New York",
+    "state": "NY",
+    "imageUrl": "/assets/u-1.png"
+  },
+  {
+    "name": "Dr. Sarah Johnson",
+    "specialty": "Dermatologist",
+    "experience": 10,
+    "city": "Los Angeles",
+    "state": "CA",
+    "imageUrl": "/assets/u-2.png"
+  },
+  {
+    "name": "Dr. Michael Brown",
+    "specialty": "Pediatrician",
+    "experience": 8,
+    "city": "Chicago",
+    "state": "IL",
+    "imageUrl": "/assets/u-3.png"
+  },
+  {
+    "name": "Dr. Emily Wilson",
+    "specialty": "Oncologist",
+    "experience": 12,
+    "city": "Houston",
+    "state": "TX",
+    "imageUrl": "/assets/u-4.png"
+  },
+  {
+    "name": "Dr. David Martinez",
+    "specialty": "Orthopedic Surgeon",
+    "experience": 20,
+    "city": "Philadelphia",
+    "state": "PA",
+    "imageUrl": "/assets/u-5.png"
+  },
+  {
+    "name": "Dr. Jessica Lee",
+    "specialty": "Psychiatrist",
+    "experience": 18,
+    "city": "Phoenix",
+    "state": "AZ",
+    "imageUrl": "/assets/u-6.png"
+  },
+  {
+    "name": "Dr. William Taylor",
+    "specialty": "Neurologist",
+    "experience": 14,
+    "city": "San Antonio",
+    "state": "TX",
+    "imageUrl": "/assets/u-7.png"
+  }
+]
